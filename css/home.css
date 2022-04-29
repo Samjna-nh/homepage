@@ -1,0 +1,53 @@
+/* resources */
+@import url("https://fonts.googleapis.com/css2?family=Tapestry&display=swap");
+/* color schemes */
+.pri, .theme-pri, .tm-pri {
+  color: whitesmoke; }
+
+.bg-pri, .theme-pri, .tm-pri {
+  background-color: darkslategray; }
+
+.theme-pri hr, .tm-pri hr {
+  background-color: whitesmoke; }
+
+.theme-pri a:link, .tm-pri a:link {
+  color: chartreuse; }
+.theme-pri a:visited, .tm-pri a:visited {
+  color: lightgray; }
+.theme-pri a:active, .tm-pri a:active {
+  color: goldenrod; }
+.theme-pri a:hover, .tm-pri a:hover {
+  color: lightyellow; }
+
+.sec, .theme-sec, .tm-sec {
+  color: mintcream; }
+
+.bg-sec, .theme-sec, .tm-sec {
+  background-color: teal; }
+
+.theme-sec hr, .tm-sec hr {
+  background-color: mintcream; }
+
+.theme-sec a:link, .tm-sec a:link {
+  color: chartreuse; }
+.theme-sec a:visited, .tm-sec a:visited {
+  color: lightgray; }
+.theme-sec a:active, .tm-sec a:active {
+  color: goldenrod; }
+.theme-sec a:hover, .tm-sec a:hover {
+  color: lightyellow; }
+
+/* alias */
+/* other */
+#title h1 {
+  font-family: 'Tapestry', serif;
+  font-variant-caps: small-caps;
+  text-align: center; }
+
+#header {
+  margin-bottom: 20px; }
+
+#links .col {
+  text-align: center; }
+
+/*# sourceMappingURL=home.css.map */

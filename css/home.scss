@@ -1,0 +1,87 @@
+/* resources */
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
+/* color schemes */
+$pri: (
+  "name": "pri",
+  "main": whitesmoke,
+  "bg": darkslategray,
+  "link": chartreuse,
+  "visited": lightgray,
+  "hover": lightyellow,
+  "active": goldenrod
+);
+$sec: (
+  "name": "sec",
+  "main": mintcream,
+  "bg": teal,
+  "link": chartreuse,
+  "visited": lightgray,
+  "hover": lightyellow,
+  "active": goldenrod
+);
+
+@mixin theme($color-theme) {
+  $name: map-get($color-theme, "name");
+
+  .#{$name} {
+    color: map-get($color-theme, "main");
+  }
+
+  .bg-#{$name} {
+    background-color: map-get($color-theme, "bg");
+  }
+
+  .theme-#{$name} {
+    @extend .#{$name};
+    @extend .bg-#{$name};
+  }
+
+  .theme-#{$name} hr {
+    background-color: map-get($color-theme, "main");
+  }
+
+  .theme-#{$name} a {
+    &:link {
+      color: map-get($color-theme, "link");
+    }
+
+    &:visited {
+      color: map-get($color-theme, "visited");
+    }
+
+    &:active {
+      color: map-get($color-theme, "active");
+    }
+
+    &:hover {
+      color: map-get($color-theme, "hover");
+    }
+  }
+}
+@include theme($pri);
+@include theme($sec);
+
+/* alias */
+
+.tm-pri {
+  @extend .theme-pri;
+}
+
+.tm-sec {
+  @extend .theme-sec;
+}
+/* other */
+#title h1 {
+  font-family: 'Tapestry', serif;
+  font-variant-caps: small-caps;
+  text-align: center;
+}
+
+#header {
+  margin-bottom: 20px;
+}
+
+#links .col {
+  text-align: center;
+}
