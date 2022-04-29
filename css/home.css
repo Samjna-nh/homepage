@@ -2,13 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Tapestry&display=swap");
 /* color schemes */
 .pri, .theme-pri, .tm-pri {
-  color: whitesmoke; }
+  color: #e8e8fc; }
 
 .bg-pri, .theme-pri, .tm-pri {
-  background-color: darkslategray; }
+  background-color: #03333e; }
+
+.bd-pri, .theme-pri, .tm-pri {
+  border-color: white; }
 
 .theme-pri hr, .tm-pri hr {
-  background-color: whitesmoke; }
+  background-color: #e8e8fc; }
 
 .theme-pri a:link, .tm-pri a:link {
   color: chartreuse; }
@@ -20,13 +23,16 @@
   color: lightyellow; }
 
 .sec, .theme-sec, .tm-sec {
-  color: mintcream; }
+  color: #fcf4ed; }
 
 .bg-sec, .theme-sec, .tm-sec {
-  background-color: teal; }
+  background-color: #4d7b70; }
+
+.bd-sec, .theme-sec, .tm-sec {
+  border-color: white; }
 
 .theme-sec hr, .tm-sec hr {
-  background-color: mintcream; }
+  background-color: #fcf4ed; }
 
 .theme-sec a:link, .tm-sec a:link {
   color: chartreuse; }
@@ -35,6 +41,27 @@
 .theme-sec a:active, .tm-sec a:active {
   color: goldenrod; }
 .theme-sec a:hover, .tm-sec a:hover {
+  color: lightyellow; }
+
+.inf, .theme-inf, .tm-inf, .floating {
+  color: #8E3200; }
+
+.bg-inf, .theme-inf, .tm-inf, .floating {
+  background-color: #98e0c7; }
+
+.bd-inf, .theme-inf, .tm-inf, .floating {
+  border-color: white; }
+
+.theme-inf hr, .tm-inf hr, .floating hr {
+  background-color: #8E3200; }
+
+.theme-inf a:link, .tm-inf a:link, .floating a:link {
+  color: chartreuse; }
+.theme-inf a:visited, .tm-inf a:visited, .floating a:visited {
+  color: lightgray; }
+.theme-inf a:active, .tm-inf a:active, .floating a:active {
+  color: goldenrod; }
+.theme-inf a:hover, .tm-inf a:hover, .floating a:hover {
   color: lightyellow; }
 
 /* alias */
@@ -49,5 +76,28 @@
 
 #links .col {
   text-align: center; }
+
+#info {
+  border: 3px double #8E3200;
+  border-radius: 3px; }
+
+#info .col {
+  text-align: center; }
+
+#info .row + .row {
+  margin-top: 3px; }
+
+.floating {
+  position: fixed;
+  z-index: 5;
+  top: 10px;
+  right: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 7px;
+  padding: 2px;
+  opacity: 0.7; }
+  .floating:hover {
+    opacity: 0.9; }
 
 /*# sourceMappingURL=home.css.map */

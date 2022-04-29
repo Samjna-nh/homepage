@@ -4,22 +4,36 @@
 /* color schemes */
 $pri: (
   "name": "pri",
-  "main": whitesmoke,
-  "bg": darkslategray,
+  "main": rgb(232, 232, 252),
+  "bg": rgb(3, 51, 62),
   "link": chartreuse,
   "visited": lightgray,
   "hover": lightyellow,
-  "active": goldenrod
+  "active": goldenrod,
+  "border": white
 );
 $sec: (
   "name": "sec",
-  "main": mintcream,
-  "bg": teal,
+  "main": rgb(252, 244, 237),
+  "bg": rgb(77, 123, 112),
   "link": chartreuse,
   "visited": lightgray,
   "hover": lightyellow,
-  "active": goldenrod
+  "active": goldenrod,
+  "border": white
 );
+
+$inf: (
+  "name": "inf",
+  "main": #8E3200,
+  "bg": rgb(152, 224, 199),
+  "link": chartreuse,
+  "visited": lightgray,
+  "hover": lightyellow,
+  "active": goldenrod,
+  "border": white
+);
+
 
 @mixin theme($color-theme) {
   $name: map-get($color-theme, "name");
@@ -32,9 +46,14 @@ $sec: (
     background-color: map-get($color-theme, "bg");
   }
 
+  .bd-#{$name} {
+    border-color: map-get($color-theme, "border");
+  }
+
   .theme-#{$name} {
     @extend .#{$name};
     @extend .bg-#{$name};
+    @extend .bd-#{$name};
   }
 
   .theme-#{$name} hr {
@@ -61,6 +80,7 @@ $sec: (
 }
 @include theme($pri);
 @include theme($sec);
+@include theme($inf);
 
 /* alias */
 
@@ -71,6 +91,12 @@ $sec: (
 .tm-sec {
   @extend .theme-sec;
 }
+
+.tm-inf {
+  @extend .theme-inf;
+}
+
+
 /* other */
 #title h1 {
   font-family: 'Tapestry', serif;
@@ -84,4 +110,34 @@ $sec: (
 
 #links .col {
   text-align: center;
+}
+
+#info {
+  border: 3px double map-get($inf, "main");
+  border-radius: 3px;
+}
+
+#info .col {
+  text-align: center;
+}
+
+#info .row + .row {
+  margin-top: 3px;
+}
+
+.floating {
+  @extend .theme-inf;
+  position: fixed;
+  z-index: 5;
+  top: 10px;
+  right: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 7px;
+  padding:2px;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
